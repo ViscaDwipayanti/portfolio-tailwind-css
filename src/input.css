@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components{
+    .navbar-fixed {
+        @apply z-[9999] bg-white bg-opacity-70
+        backdrop-blur-[8px] fixed;
+        box-shadow: inset 0 -1px 0 0 rgba(0, 0 ,0 , 0.2);
+    }
+
+    .hamburger-line {
+        @apply w-[30px] h-[2px] my-2 block bg-dark; 
+    }
+
+    .hamburger-active > span:nth-child(1) {
+        @apply  rotate-45;
+    }
+
+    .hamburger-active > span:nth-child(2) {
+        @apply scale-0;
+    }
+
+    .hamburger-active > span:nth-child(3) {
+        @apply  -rotate-45;
+    }
+
+    .card-skill{
+        @apply ml-2 mb-12 px-8 border py-4 rounded-md shadow-md border-slate-600 bg-slate-800 w-full md:w-[calc(50%-0.75rem)];
+    }
+}
